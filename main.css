@@ -1,8 +1,32 @@
 /* Your code here */
 
-/* Supplied CSS follows. */
-.header-nav__group{
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.header-nav__container {
+  background-color: #026AA7;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 4px;
+  color: white;
+
   display: flex;
+  justify-content: space-between;
+
+}
+
+/* Supplied CSS follows. */
+.header-nav__group {
+  display: flex;
+  padding: 5px;
+}
+
+
+.header-nav__button#alerts {
+  background-color: #CF513D;
 }
 
 .header-nav__button {
@@ -13,7 +37,7 @@
   text-decoration: none;
   align-items: center;
   text-align: center;
-  background-color: hsla(0,0%,100%,.3);
+  background-color: hsla(0, 0%, 100%, .3);
   box-shadow: none;
   color: #fff;
   line-height: 32px;
@@ -24,7 +48,7 @@
   height: 20px;
 }
 
-.header-nav__button#search > input {
+.header-nav__button#search>input {
   border-style: none;
   border: none;
   background-image: none;
@@ -34,7 +58,7 @@
   box-shadow: none;
 }
 
-.header-nav__button > .boards-label {
+.header-nav__button>.boards-label {
   font-weight: 700;
   padding-left: 4px;
 }
@@ -48,6 +72,21 @@
   top: 5px;
 }
 
- .header-nav__button > i{
+.header-nav__button>i {
   width: 24px;
+}
+
+
+@media screen and (max-width: 730px) {
+
+  /* Hide the header search input field. */
+  .header-nav__button#search>input {
+    display: none;
+  }
+
+  /* Hide the "Boards" text, but leave the boards icon. */
+  .header-nav__button>.boards-label {
+    display: none;
+  }
+
 }
